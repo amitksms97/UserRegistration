@@ -1,5 +1,6 @@
 import re
 from user_registration_exception import UserRegistrationException
+from user_registration_interface import IMyInterface
 
 first_name = "^[A-Z][a-z]{2,}$"
 last_name = "^[A-Z][a-z]{2,}$"
@@ -8,7 +9,7 @@ phone = "^91[\\s][6-9][0-9]{9}$"
 password = "^(?=.*[0-9])" + "(?=.*[a-z])(?=.*[A-Z])" + "(?=.*[@#$%^&+=]).{8,20}"
 
 
-class UserRegistration:
+class UserRegistration(IMyInterface):
 
     def __init__(self):
         pass
